@@ -1,0 +1,516 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script src="http://apps.bdimg.com/libs/jquery/2.1.4/jquery.min.js"></script>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        .whole {
+            background: #302a22;
+            width: 1010px;
+            height: 750px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .head {
+            display: flex;
+            flex-direction: row;
+            width: 1000px;
+            margin-left: auto;
+            margin-right: auto;
+
+        }
+
+        .head-l {
+            height: 44px;
+            width: 303px;
+            background: url("images/head-bg.png") repeat-x;
+            border-radius: 5px 5px 0 0;
+            display: flex;
+            align-items: center;
+            margin-top: 20px;
+        }
+
+        .head-l img {
+            width: 38px;
+            height: 34px;
+        }
+
+        .head-l01 h3 {
+            color: #fff;
+            margin-left: 4px;
+        }
+
+        .head-l01 p {
+            font-size: 14px;
+            color: rgb(255, 217, 175);
+            margin-left: 5px;
+        }
+
+        .head-r {
+            height: 44px;
+            width: 700px;
+            background: url("images/head-bg.png") repeat-x;
+            border-radius: 5px 5px 0 0;
+            margin-left: 5px;
+            margin-top: 20px;
+        }
+
+        .con {
+            display: flex;
+            flex-direction: row;
+            width: 1000px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .con-l01 {
+            height: 67px;
+            width: 300px;
+            background: url("images/conn.png") repeat-x;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+
+        .con-l01>div {
+            display: flex;
+            flex-direction: row;
+            margin-left: 5px;
+        }
+
+        .con-l01 p {
+            color: #e5b680;
+        }
+
+        .con-l02 {
+            height: 43px;
+            width: 300px;
+            background: url("images/bg02.png") repeat-x;
+            margin-top: -5px;
+            display: flex;
+            align-items: center;
+        }
+
+        .con-l02 img {
+            width: 18px;
+            height: 20px;
+            margin-left: 5px;
+        }
+
+        .con-l02 h3 {
+            color: #fff;
+            font-size: 15px;
+        }
+
+        table {
+            width: 300px;
+            border-collapse: collapse;
+
+        }
+
+        tr {
+            height: 41px;
+            background: url("images/bg04.png") repeat-x;
+            border: 1px solid #e5b680;
+        }
+
+        td {
+            font-size: 12px;
+        }
+
+        td:last-child {
+            padding-right: 15px;
+        }
+
+        .tm {
+            width: 41px;
+            height: 498px;
+            background: rgba(106, 98, 88, .8);
+            position: relative;
+            top: -529px;
+            left: 260px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .tm img {
+            margin-top: 20px;
+        }
+
+        .con-l08 {
+            height: 152px;
+            width: 300px;
+            background: url("images/bg03.png") repeat;
+        }
+
+        .zonge {
+            height: 141px;
+            width: 300px;
+            background: #f3e7bf;
+        }
+
+        .zonge .con-l081 {
+            background: #fff;
+            height: 43px;
+            width: 213px;
+            position: relative;
+            top: 28px;
+            left: 15px;
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            align-items: center;
+            justify-content: space-around;
+        }
+
+        .con-l081 h3 {
+            color: red;
+        }
+
+        .ss {
+            margin-top: 50px;
+            margin-left: 20px;
+        }
+
+        .ss input {
+            height: 18px;
+            border-radius: 10px 11px 11px 10px;
+        }
+
+        .ss button {
+            background: #fff;
+            border-radius: 8px 8px 8px 8px;
+            border: none;
+            width: 28px;
+            margin-left: -27px;
+        }
+
+        .ss .pic {
+            position: relative;
+            left: -25px;
+            top: 5px;
+        }
+
+        .zt p {
+            color: peachpuff;
+            margin-left: 20px;
+            margin-top: 10px;
+            font-size: 15px;
+        }
+
+        .con-r {
+            height: 450px;
+
+        }
+
+        .con-r ul {
+            width: 600px;
+            display: flex;
+            justify-content: space-around;
+            list-style: none;
+            margin-top: 18px;
+            margin-left: 53px;
+        }
+
+        li {
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            width: 107px;
+            height: 47px;
+            background: #ecbd85;
+            border-radius: 5px 5px 0 0;
+        }
+
+        ul .box {
+            width: 50px;
+        }
+        
+
+        .content {
+            position: relative;
+            height: 540px;
+            width: 690px;
+            background: url("images/bg06.png") repeat-y;
+            margin-left: 10px;
+        }
+
+        .content>div {
+            position: absolute;
+            width: 100%;
+            height: 100px;
+        }
+
+        .qfcake {
+            display: flex;
+            margin-left: 88px;
+            margin-top: 48px;
+        }
+
+        .qfcake div {
+            width: 106px;
+            height: 56px;
+            border: 1px solid #f0d3b1;
+            margin-right: 8px;
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            font-size: 12px;
+            box-shadow: 5px 5px 5px #f8eee6;
+
+        }
+
+        .current {
+            background: #c6412e;
+        }
+        .bottom{
+            display: flex;
+        }
+
+        .tab{
+            width: 480px;
+            display: flex;
+            justify-content: space-around;
+            margin-left: 75px;
+            margin-top: 10px;
+        }
+        
+        .shop1{
+            color: #fff;
+            font-size:12px;
+            margin-top: 3px;
+            margin-left: 5px;
+        }
+        .shop{
+            color: #fff;
+            font-size:12px;
+            margin-top: 3px;
+        }
+        .tab img{
+            margin-left: -6px;
+        }
+        .pay{
+            width: 129px;
+            height: 53px;
+            background: #c6412e;
+            display: flex;
+            flex-direction: row;
+            margin-top:16px;
+            margin-left: 5px;
+            justify-content: center;
+            align-items: center;
+        }
+        .pay p{
+            color: #fff;
+            font-size: 24px;
+            margin-left: 5px;
+            margin-top:-3px;
+        }
+        
+    </style>
+</head>
+
+<body>
+    <div class="whole">
+        <div class="head">
+            <div class="head-l">
+                <img src="images/1.png" alt="">
+                <div class="head-l01">
+                    <h3>烘焙+</h3>
+                    <p>HONGBEI</p>
+                </div>
+            </div>
+            <div class="head-r">
+            </div>
+        </div>
+        <div class="con">
+            <div class="con-l">
+                <div class="con-l01">
+                    <div>
+                        <img src="images/2.png" alt="">
+                        <p>黑侠（光谷店）</p>
+                    </div>
+                    <div>
+                        <img src="images/time.png" alt="">
+                        <p>2016-04-06 10:23 AM</p>
+                    </div>
+                </div>
+                <div class="con-l02">
+                    <img src="images/3.png" alt="">
+                    <h3>收支明细</h3>
+                </div>
+                <table>
+                    <tr>
+                        <td></td>
+                        <td>品名</td>
+                        <td>数量</td>
+                        <td>金额</td>
+                        <td>结算价</td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td>蛋挞</td>
+                        <td>5</td>
+                        <td>60</td>
+                        <td>60</td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td>全麦面包</td>
+                        <td>1</td>
+                        <td>10.5</td>
+                        <td>10.5</td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <img src="images/赠.png" alt="">
+                        </td>
+                        <td>戚风蛋糕</td>
+                        <td>1</td>
+                        <td>20</td>
+                        <td>0</td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td>三明治</td>
+                        <td>5</td>
+                        <td>60</td>
+                        <td>60</td>
+                    </tr>
+                </table>
+                <div class="con-l08">
+                </div>
+                <div class="zonge">
+                    <div class="con-l081">
+                        <h3>总额:</h3>
+                        <h3>￥125.5</h3>
+                    </div>
+                    <div class="ss">
+                        <input type="text">
+                        <img src="images/sou.png" alt="" class="pic">
+                        <button>
+                            <img src="images/sousuo.png" alt="">
+                        </button>
+                    </div>
+                </div>
+                <div class="zt">
+                    <p>会员信息：</p>
+                </div>
+                <div class="tm">
+                    <img src="images/cheng.png" alt="">
+                    <img src="images/jia.png" alt="">
+                    <img src="images/jian.png" alt="">
+                    <img src="images/zeng.png" alt="">
+                    <img src="images/bi.png" alt="">
+                    <img src="images/gua.png" alt="">
+                    <img src="images/olll.png" alt="">
+                </div>
+
+            </div>
+            <div class="con-r">
+                <ul class="nav">
+                    <li class="current">戚风蛋糕</li>
+                    <li>蛋挞</li>
+                    <li>全麦面包</li>
+                    <li>戚风蛋糕</li>
+                    <li>三明治</li>
+                    <li class="box">||</li>
+                </ul>
+                <div class="hong"></div>
+                <div class="content">
+                    <div class="qfcake">
+                        <div>
+                            0001
+                            <br> 巧克力蛋糕
+                        </div>
+                        <div>
+                            0001
+                            <br> 巧克力蛋糕
+                        </div>
+                        <div>
+                            0001
+                            <br> 巧克力蛋糕
+                        </div>
+                        <div>
+                            0001
+                            <br> 巧克力蛋糕
+                        </div>
+                        <div>
+                            0001
+                            <br> 巧克力蛋糕
+                        </div>
+                    </div>
+                    <div class="dt">
+
+                    </div>
+                    <div class="qm">
+
+                    </div>
+                    <div class="xfcake">
+
+                    </div>
+                    <div class="smz">
+
+                    </div>
+                </div>
+                <script>
+                    $(function () {
+                        $('.nav>li').click(function () {
+                            $(this).addClass("current").siblings().removeClass("current")
+                            $(".content>div").eq($(this).index()).show(300).siblings().hide(300)
+                        })
+                    })
+                </script>
+                <div class="bottom">
+                    <div class="tab">
+                        <div>
+                            <img src="images/shezhi.png" alt="">
+                            <p class="shop">管理台</p>
+                        </div>
+                        <div>
+                            <img src="images/xinyongka.png" alt="">
+                            <p class="shop">购物卡</p>
+                        </div>
+                        <div>
+                            <img src="images/会员.png" alt="">
+                            <p class="shop1">会员</p>
+                        </div>
+                        <div>
+                            <img src="images/促销.png" alt="">
+                            <p class="shop1">促销</p>
+                        </div>
+                        <div>
+                            <img src="images/预定.png" alt="">
+                            <p class="shop1">预定</p>
+                        </div>
+                        <div>
+                            <img src="images/交班.png" alt="">
+                            <p class="shop1">交班</p>
+                        </div>
+                        <div>
+                            <img src="images/挂单.png" alt="">
+                            <p class="shop1">挂单</p>
+                        </div>
+                    </div>
+                    <div class="pay">
+                        <div><img src="images/收银中心.png" alt=""></div>
+                        <p>收银</p>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+</body>
+
+</html>
